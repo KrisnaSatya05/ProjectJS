@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Proyek GitHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[url('assets/BG2.jpg')] bg-cover bg-fixed bg-center text-white">
+
+    <nav class="text-white backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Portofolio</h1>
+        </div>
+    </nav>
+
+    <section class="py-20 min-h-screen bg-black/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Proyek Pilihan (Terhubung ke GitHub)</h2>
+
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+
+            <div class="text-center mt-12">
+                <a href="https://github.com/KrisnaSatya05" target="_blank" class="bg-gray-300 text-gray-900 font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-white hover:scale-105 transition duration-300 inline-flex items-center">
+                    Lihat Semua Repositori di GitHub
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.013c0 4.414 2.871 8.163 6.83 9.497.5.092.682-.218.682-.486 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.34-3.37-1.34-.454-1.154-1.107-1.46-1.107-1.46-.906-.62.068-.608.068-.608 1.007.07 1.532 1.03 1.532 1.03.896 1.532 2.345 1.09 2.91.835.09-.647.348-1.09.634-1.339-2.223-.252-4.555-1.111-4.555-4.943 0-1.09.39-1.983 1.03-2.673-.103-.252-.446-1.266.098-2.636 0 0 .84-.268 2.75 1.025A9.57 9.57 0 0110 5.48c.84 0 1.688.114 2.484.341 1.91-1.293 2.748-1.025 2.748-1.025.546 1.37.202 2.384.1 2.636.64.69 1.028 1.583 1.028 2.673 0 3.842-2.336 4.686-4.566 4.935.357.307.678.915.678 1.848 0 1.337-.012 2.417-.012 2.747 0 .27.18.583.688.484C17.135 18.17 20 14.42 20 10.013 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white py-6 text-center bg-black/70 backdrop-blur-md">
+        <p>&copy; 2025 KS. All rights reserved.</p>
+    </footer>
+
+<script>
+    const projectsContainer = document.getElementById('projects-container');
+
+    const projectData = [
+        {
+            name: "SportGear E-Commerce (React)",
+            description: "Aplikasi e-commerce frontend modern dengan React, Vite, dan Tailwind CSS. Fitur utama: Manajemen Stok Real-time dan Context API untuk Cart.",
+            language: "JavaScript/React",
+            stars: 5,
+            link: "https://github.com/KrisnaSatya05/my-app",
+            live: ""
+        },
+        {
+            name: "My Portofolio Website",
+            description: "Website portofolio pribadi untuk menampilkan proyek-proyek dan informasi diri.",
+            language: "HTML/CSS/JS",
+            stars: 3,
+            link: "https://github.com/KrisnaSatya05/CV",
+            live: "https://cv-red-six.vercel.app/"
+        },
+        {
+            name: "Kalkulator Sederhana",
+            description: "Implementasi fungsi kalkulator bangun datar menggunakan HTML murni dan JavaScript DOM Manipulation (Project Dasar).",
+            language: "JavaScript",
+            stars: 1,
+            link: "https://github.com/KrisnaSatya05/bangundatar",
+            live: ""
+        }
+    ];
+
+    function createProjectCard(project) {
+        const card = document.createElement('div');
+        card.className = 'bg-gray-800/90 p-6 rounded-xl shadow-2xl border border-gray-700 hover:border-gray-300 hover:shadow-gray-600/50 transition duration-300 flex flex-col';
+        
+        const liveLink = project.live 
+            ? `<a href="${project.live}" target="_blank" class="text-sm font-semibold text-gray-300 hover:text-white transition">Demo Live &rarr;</a>`
+            : `<span class="text-sm font-semibold text-gray-500">Demo Tidak Tersedia</span>`;
+
+        card.innerHTML = `
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-gray-300">${project.name}</h3>
+                <span class="text-sm text-yellow-400 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.62-.921 1.92 0l1.242 3.824a1 1 0 00.95.691h4.02a1 1 0 01.755 1.705l-3.264 2.375a1 1 0 00-.36 1.118l1.24 3.824a1 1 0 01-1.54 1.118l-3.264-2.375a1 1 0 00-1.176 0l-3.264 2.375a1 1 0 01-1.54-1.118l1.24-3.824a1 1 0 00-.36-1.118L2.08 9.147a1 1 0 01.755-1.705h4.02a1 1 0 00.95-.691l1.242-3.824z" />
+                    </svg>
+                    ${project.stars}
+                </span>
+            </div>
+            <p class="text-gray-400 mb-4 flex-grow">${project.description}</p>
+            
+            <div class="mt-auto">
+                <span class="inline-block bg-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">${project.language}</span>
+                
+                <div class="flex justify-between items-center pt-2 border-t border-gray-700">
+                    ${liveLink}
+                    <a href="${project.link}" target="_blank" class="text-gray-300 hover:text-white transition font-semibold">
+                        Lihat di GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+        `;
+        projectsContainer.appendChild(card);
+    }
+
+    // Render semua kartu proyek saat halaman dimuat
+    projectData.forEach(createProjectCard);
+</script>
+</body>
+</html>
